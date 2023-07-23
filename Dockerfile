@@ -2,7 +2,7 @@ FROM python:3.11.3-alpine3.18
 
 LABEL maintainer="mathew.thomas@longdivision.com"
 RUN apk add --update --no-cache bash bash-completion \
-	libffi-dev tzdata git postgresql-client && \
+	libffi-dev tzdata git postgresql-client libstdc++ && \
 	apk add --update --no-cache --virtual .tmp-build-deps \
 		build-base postgresql-dev
 
